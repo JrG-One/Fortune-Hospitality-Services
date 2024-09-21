@@ -20,16 +20,16 @@
      * COLORS
      */
   
-    --dark-teal: #16423C;
-    --soft-green: #16423C;
-    --light-gray: #C4DAD2;
-    --very-light-gray-1: #6da489;
-    --very-light-gray-2: rgb(202, 227, 212);
-    --very-light-gray-3: rgb(164, 210, 186);
-    --gray-1: rgb(155, 191, 167);
-    --gray-2: rgb(173, 207, 186);
-    --gray-3: rgb(163, 196, 186);
-    --gray-4: rgb(159, 198, 182);
+    --dark-teal: #3e3e3b;
+    --soft-green: #d1c3a9;
+    --light-gray: #d7d29e;
+    --very-light-gray-1: #51534a;
+    --very-light-gray-2: #ECDFCC;
+    --very-light-gray-3: #d5c9b6;
+    --gray-1: #ccc2b2;
+    --gray-2: #c3bcb1;
+    --gray-3: #b2a898;
+    --gray-4: #ded7cd;
     --white: hsla(0, 0%, 100%, 1);
     --white-alpha-20: hsla(0, 0%, 100%, 0.2);
     --white-alpha-10: hsla(0, 0%, 100%, 0.1);
