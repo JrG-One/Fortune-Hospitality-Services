@@ -692,6 +692,7 @@
     max-width: max-content;
     margin-inline: auto;
     margin-block-end: 60px;
+    width: 80px;
   }
   
   .navbar-list {
