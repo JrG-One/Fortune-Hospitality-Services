@@ -836,10 +836,9 @@
     position: absolute;
     bottom: 15px;
     right: 15px;
-    z-index: 2;
+    z-index: 10;
     background-color: var(--dark-teal);
     width: 110px;
-    height: 110px;
     padding: 12px;
     transform: scale(0.6);
   }
