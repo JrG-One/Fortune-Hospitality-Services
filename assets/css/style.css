@@ -1067,7 +1067,7 @@
     border-radius: var(--radius-24);
   }
   
-  .menu-card .card-title { transition: var(--transition-1); }
+  .menu-card .card-title { transition: var(--transition-1); font-size: 28px;}
   
   .menu-card .card-title:is(:hover, :focus-visible) { color: var(--dark-teal); }
   
@@ -1090,6 +1090,7 @@
   .menu-card .card-text {
     color: var(--soft-green);
     line-height: var(--lineHeight-4);
+    font-size: 12px;
   }
   
   .menu-text .span {
