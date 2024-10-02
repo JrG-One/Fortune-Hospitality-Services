@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers at Fortune Hospitality Services (FHS)</title>
+    <link rel="stylesheet" href="car_style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home" class="smooth-scroll">Home</a></li>
+            <li><a href="#about" class="smooth-scroll">About Us</a></li>
+            <li><a href="#vacancies" class="smooth-scroll">Vacancies</a></li>
+            <li><a href="#contact" class="smooth-scroll">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <section id="vacancies">
+        <div class="container">
+            <h1>Join the Fortune Hospitality Services Team</h1>
+            <p style="color:white;">Explore our current job openings and apply below:</p>
+
+            <!-- Job Vacancy 1 -->
+            <div class="job fade-in">
+                <h2>Front Desk Manager</h2>
+                <p>Location: Mumbai</p>
+                <p>Requirements: 3+ years experience in hospitality management.</p>
+                <button class="apply-btn" onclick="showForm('Front Desk Manager')">Apply Now</button>
+            </div>
+
+            <!-- Job Vacancy 2 -->
+            <div class="job fade-in">
+                <h2>Chef</h2>
+                <p>Location: New Delhi</p>
+                <p>Requirements: 5+ years experience in culinary arts.</p>
+                <button class="apply-btn" onclick="showForm('Chef')">Apply Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Application Form -->
+    <div id="application-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h2>Apply for <span id="job-title"></span></h2>
+            <form id="apply-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required>
+
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" required>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="car_script.js"></script>
+</body>
+</html>
