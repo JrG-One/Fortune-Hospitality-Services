@@ -11,6 +11,7 @@ html {
 }
 
 /* Navigation Bar */
+/*nav*/
 .navbar {
     display: flex;
     justify-content: space-between;
