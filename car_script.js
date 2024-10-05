@@ -55,3 +55,4 @@ document.getElementById('apply-form').addEventListener('submit', function(event)
     alert('Application submitted successfully!');
     closeForm();
 });
+
