@@ -168,3 +168,24 @@ window.addEventListener("mousemove", function (event) {
   }
 
 });
+
+/*Slogans animation*/
+let currentQuoteIndex = 0;
+
+function changeQuote() {
+    const quotes = document.querySelectorAll('.quote');
+
+    // Fade out and slide out the current quote
+    quotes[currentQuoteIndex].style.animation = 'slideOut 0.5s forwards';
+
+    // Set a timeout to allow the slide-out to complete before changing the quote
+    setTimeout(() => {
+        quotes[currentQuoteIndex].classList.remove('active');
+        currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+        quotes[currentQuoteIndex].classList.add('active');
+        quotes[currentQuoteIndex].style.animation = 'slideIn 0.5s forwards'; // Slide in the next quote
+    }, 500); // Match the timeout to the duration of the slide-out animation
+}
+
+// Auto change quote every 5 seconds
+setInterval(changeQuote, 5000);
