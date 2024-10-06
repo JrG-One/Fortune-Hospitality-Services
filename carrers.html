@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers at Fortune Hospitality Services (FHS)</title>
     <link rel="stylesheet" href="car_style.css">
+    
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -65,24 +66,58 @@
         <div class="modal-content">
             <span class="close" onclick="closeForm()">&times;</span>
             <h2>Apply for <span id="job-title"></span></h2>
-            <form id="apply-form">
+            <form action="https://api.web3forms.com/submit" enctype="multipart/form-data" method="POST" id="apply-form" onsubmit="handleSubmit(event)">
+                <input type="hidden" name="access_key" value="5a888596-9305-48c1-a715-3fe0cc23a7c4">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" placeholder="John Doe" required>
-
                 <label for="email">Email Address:</label>
                 <input type="email" id="email" name="email" placeholder="johndoe@example.com" required>
-
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" required>
-
                 <label for="resume">Upload Resume:</label>
                 <input type="file" id="resume" name="resume" required>
-
                 <button type="submit">Submit Application</button>
             </form>
         </div>
     </div>
 
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            const form = document.getElementById('apply-form');
+            const formData = new FormData(form); // Create a FormData object from the form
+    
+            // Send form data using Fetch API
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Application submitted successfully!');
+                    closeForm(); // Optionally close the form
+                } else {
+                    alert('Error submitting application. Please try again. Error: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        }
+    
+        function showForm(jobTitle) {
+            document.getElementById('job-title').innerText = jobTitle;
+            document.getElementById('application-modal').style.display = 'block';
+        }
+    
+        function closeForm() {
+            document.getElementById('application-modal').style.display = 'none';
+        }
+    </script>
+    
     <script src="car_script.js"></script>
 </body>
 </html>
