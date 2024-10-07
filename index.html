@@ -35,6 +35,33 @@
   <link rel="preload" as="image" href="./assets/images/IMG_9191.JPG">
   <link rel="preload" as="image" href="./assets/images/IMG_0968.jpg">
   <link rel="preload" as="image" href="./assets/images/IMG_9218.JPG">
+  <script>
+    async function handleSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: form.method,
+                body: formData,
+            });
+
+            if (response.ok) {
+                // Optionally, clear the form fields after successful submission
+                form.reset();
+                // Display success message
+                alert("Form submitted successfully!");
+            } else {
+                alert("There was a problem with the submission. Please try again.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("There was a problem with the submission. Please try again.");
+        }
+    }
+</script>
 
 </head>
 
@@ -57,10 +84,10 @@
     - #TOP BAR
   -->
 
-  <div class="topbar" style="background-color: gray;">
+  <div class="topbar" style="background-color: gray; position:fixed;">
     <div class="container">
 
-      <address class="topbar-item" style="margin-left: -400px;">
+      <address class="topbar-item" style="margin-left: -180px;">
         <div class="icon">
           <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
         </div>
@@ -70,20 +97,21 @@
         </span>
       </address>
       <div class="separator"></div>
-      <a href="tel:+919974773663" class="topbar-item link">
+        
+        <a href="tel:+919974773663" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+        <span class="span">+91-9974773663 </span>
+      </a>
+      <div class="separator"></div>
+      <a href="tel:+919879555976" class="topbar-item link">
         <div class="icon">
           <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <span class="span">+919974773663 </span>
-        <!-- <span class="span">+919825418293 </span> -->
+        <span class="span"> +91-9879555976</span>
       </a>
-      <!-- <a href="tel:+919825418293" class="topbar-item link"></a>
-        <div class="icon">
-          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-        </div>
-        <span class="span">+919825418293 </span>
-      </a> -->
 
       <div class="separator"></div>
 
@@ -134,7 +162,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#menu" class="navbar-link hover-underline">
+            <a href="#Buisness" class="navbar-link hover-underline">
               <div class="separator"></div>
 
               <span class="span">Buisness Areas</span>
@@ -150,15 +178,15 @@
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover-underline">
+            <a href="#Strength" class="navbar-link hover-underline">
               <div class="separator"></div>
 
-              <span class="span">Our Chefs</span>
+              <span class="span">Our Strength</span>
             </a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover-underline">
+            <a href="#Contact" class="navbar-link hover-underline">
               <div class="separator"></div>
 
               <span class="span">Contact</span>
@@ -171,26 +199,23 @@
           <p class="headline-1 navbar-title">Visit Us</p>
 
           <address class="body-4">
-            Restaurant St, Delicious City, <br>
-            London 9578, UK
+            1201 – Mars, Rajhans Campus, Opp. Rajhans Cinema, Pal Hazira Road, Surat – 395009, Gujarat, India
           </address>
 
-          <p class="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
-
-          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">booking@grilli.com</a>
+          <a href="mailto:fortunehs99@gmail.com" class="body-4 sidebar-link">fortunehs99@gmail.com</a>
 
           <div class="separator"></div>
 
-          <p class="contact-label">Booking Request</p>
+          <p class="contact-label">Contact</p>
 
-          <a href="tel:+88123123456" class="body-1 contact-number hover-underline">
-            +88-123-123456
+          <a href="tel:+91-9879555976" class="body-1 contact-number hover-underline">
+            +91-9879555976
           </a>
         </div>
 
       </nav>
 
-      <a href="#" class="btn btn-secondary">
+      <a href="./carrers.html" class="btn btn-secondary">
         <span class="text text-1">Careers</span>
 
         <span class="text text-2" aria-hidden="true">Careers</span>
@@ -305,7 +330,7 @@
           <ion-icon name="chevron-forward"></ion-icon>
         </button>
 
-        <a href="#" class="hero-btn has-after">
+        <a href="#Contact" class="hero-btn has-after">
           <!-- <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon"> -->
 
           <span class="text text-2">Contact Us</span>
@@ -318,7 +343,7 @@
         - #ABOUT
       -->
 
-      <section class="section about text-center" aria-labelledby="about-label" id="about">
+      <section class="section about text-center" aria-labelledby="about-label" id="about" >
         <div style="margin-top: -80px;">
           <p class="section-subtitle label-2">Behind the Success</p>
 
@@ -368,7 +393,7 @@
 
       
 
-      <section class="section about text-center" aria-labelledby="about-label" id="about">
+      <section class="section about text-center" aria-labelledby="about-label" id="about" style="margin-top:-180px ; margin-bottom: -90px;">
         <div class="container">
 
           <div class="about-content">
@@ -413,256 +438,6 @@
       
 
 
-
-
-      <!-- 
-        - #SPECIAL DISH
-      -->
-<!-- 
-      <section class="special-dish text-center" aria-labelledby="dish-label">
-
-        <div class="special-dish-banner">
-          <img src="./assets/images/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
-            class="img-cover">
-        </div>
-
-        <div class="special-dish-content bg-black-10">
-          <div class="container">
-
-            <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
-
-            <p class="section-subtitle label-2">Special Dish</p>
-
-            <h2 class="headline-1 section-title">Lobster Tortellini</h2>
-
-            <p class="section-text">
-              Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
-              industrys standard dummy text ever since the when an unknown printer took a galley of type.
-            </p>
-
-            <div class="wrapper">
-              <del class="del body-3">$40.00</del>
-
-              <span class="span body-1">$20.00</span>
-            </div>
-
-            <a href="#" class="btn btn-primary">
-              <span class="text text-1">View All Menu</span>
-
-              <span class="text text-2" aria-hidden="true">View All Menu</span>
-            </a>
-
-          </div>
-        </div>
-
-        <img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">
-
-        <img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2">
-
-      </section>
- -->
-
-
-
-      
-      <!-- 
-        - #MENU
-      -->
-
-      <!-- <section class="section menu" aria-label="menu-label" id="menu">
-        <div class="container">
-
-          <p class="section-subtitle text-center label-2">Special Selection</p>
-
-          <h2 class="headline-1 section-title text-center">Delicious Menu</h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="menu-card hover:card">
-
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Greek Salad"
-                    class="img-cover">
-                </figure>
-
-                <div>
-
-                  <div class="title-wrapper">
-                    <h3 class="title-3">
-                      <a href="#" class="card-title">Greek Salad</a>
-                    </h3>
-
-                    <span class="badge label-1">Seasonal</span>
-
-                    <span class="span title-2">$25.50</span>
-                  </div>
-
-                  <p class="card-text label-1">
-                    Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="menu-card hover:card">
-
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Lasagne"
-                    class="img-cover">
-                </figure>
-
-                <div>
-
-                  <div class="title-wrapper">
-                    <h3 class="title-3">
-                      <a href="#" class="card-title">Lasagne</a>
-                    </h3>
-
-                    <span class="span title-2">$40.00</span>
-                  </div>
-
-                  <p class="card-text label-1">
-                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="menu-card hover:card">
-
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Butternut Pumpkin"
-                    class="img-cover">
-                </figure>
-
-                <div>
-
-                  <div class="title-wrapper">
-                    <h3 class="title-3">
-                      <a href="#" class="card-title">Butternut Pumpkin</a>
-                    </h3>
-
-                    <span class="span title-2">$10.00</span>
-                  </div>
-
-                  <p class="card-text label-1">
-                    Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="menu-card hover:card">
-
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Tokusen Wagyu"
-                    class="img-cover">
-                </figure>
-
-                <div>
-
-                  <div class="title-wrapper">
-                    <h3 class="title-3">
-                      <a href="#" class="card-title">Tokusen Wagyu</a>
-                    </h3>
-
-                    <span class="badge label-1">New</span>
-
-                    <span class="span title-2">$39.00</span>
-                  </div>
-
-                  <p class="card-text label-1">
-                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="menu-card hover:card">
-
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Olivas Rellenas"
-                    class="img-cover">
-                </figure>
-
-                <div>
-
-                  <div class="title-wrapper">
-                    <h3 class="title-3">
-                      <a href="#" class="card-title">Olivas Rellenas</a>
-                    </h3>
-
-                    <span class="span title-2">$25.00</span>
-                  </div>
-
-                  <p class="card-text label-1">
-                    Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="menu-card hover:card">
-
-                <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Opu Fish"
-                    class="img-cover">
-                </figure>
-
-                <div>
-
-                  <div class="title-wrapper">
-                    <h3 class="title-3">
-                      <a href="#" class="card-title">Opu Fish</a>
-                    </h3>
-
-                    <span class="span title-2">$49.00</span>
-                  </div>
-
-                  <p class="card-text label-1">
-                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices
-                  </p>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <p class="menu-text text-center">
-            During winter daily from <span class="span">7:00 pm</span> to <span class="span">9:00 pm</span>
-          </p>
-
-          <a href="#" class="btn btn-primary">
-            <span class="text text-1">View All Menu</span>
-
-            <span class="text text-2" aria-hidden="true">View All Menu</span>
-          </a>
-
-          <img src="./assets/images/shape-5.png" width="921" height="1036" loading="lazy" alt="shape"
-            class="shape shape-2 move-anim">
-          <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
-            class="shape shape-3 move-anim">
-
-        </div>
-      </section> -->
       
       <!-- 
         - #SERVICE
@@ -755,7 +530,7 @@
   - #BUSINESS AREAS
 -->
 
-<section class="section menu" aria-label="menu-label" id="menu">
+<section class="section menu" aria-label="menu-label" id="Buisness">
     <div class="container">
   
       <p class="section-subtitle text-center label-2">Our Expertise</p>
@@ -1026,22 +801,11 @@
         </li>
   
       </ul>
-  
-      <p class="menu-text text-center">
-        Available for inquiries from <span class="span">9:00 am</span> to <span class="span">6:00 pm</span>
-      </p>
-  
-      <a href="#" class="btn btn-primary">
-        <span class="text text-1">Explore Our Services</span>
-  
-        <span class="text text-2" aria-hidden="true">Explore Our Services</span>
-      </a>
-  
-      <!-- <img src="./assets/images/shape-5.png" width="501" height="136" loading="lazy" alt="shape"
-        class="shape shape-2 move-anim"> -->
-      <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
+    
+      <img src="./assets/images/shape-5.png" style="height: 70%;" loading="lazy" alt="shape"
+        class="shape shape-2 move-anim">
+      <img src="./assets/images/shape-6.png" style="width: 80%;" width="343" height="345" loading="lazy" alt="shape"
         class="shape shape-3 move-anim">
-  
     </div>
   </section>
   
@@ -1054,7 +818,7 @@
         - #FEATURES
       -->
 
-      <section class="section features text-center" aria-label="features">
+      <section class="section features text-center" aria-label="features" style="margin-top: -140px;" id="Strength">
         <div class="container">
 
           <p class="section-subtitle label-2">Why Choose Us</p>
@@ -1121,7 +885,7 @@
 
           </ul>
 
-          <img src="./assets/images/shape-7.png" width="208" height="178" loading="lazy" alt="shape"
+          <img src="./assets/images/shape-7.png" style="z-index: 1;" width="208" height="178" loading="lazy" alt="shape"
             class="shape shape-1">
 
           <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
@@ -1171,19 +935,6 @@
                 </p>
             </div>
             </div>
-          <div class="wrapper">
-            <div class="separator"></div>
-            <div class="separator"></div>
-            <div class="separator"></div>
-          </div>
-
-          <!-- <div class="profile">
-            <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Sam Jhonson"
-              class="img">
-
-            <p class="label-2 profile-name">Sam Jhonson</p>
-          </div> -->
-
         </div>
       </section>
 
@@ -1195,215 +946,54 @@
         - #RESERVATION
       -->
 
-      <section class="reservation">
+      <section class="reservation" id="Contact">
         <div class="container">
 
           <div class="form reservation-form bg-black-10">
 
-            <form action="" class="form-left">
-
+            <form action="https://formsubmit.co/ojaswavarshney27@gmail.com" method="POST" class="form-left" onsubmit="handleSubmit(event)">
               <h2 class="headline-1 text-center">Send us a message</h2>
-
               <p class="form-text text-center">
-                or call us at <a href="tel:+88123123456" class="link">+88-123-123456</a>
+                  or call us at <a href="tel:+88123123456" class="link">+88-123-123456</a>
               </p>
-
+      
               <div class="input-wrapper">
-                <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field">
-
-                <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
+                  <!-- <input type="hidden" name="access_key" value="5a888596-9305-48c1-a715-3fe0cc23a7c4"> -->
+                  <input type="hidden" name="subject" value="Someone Contact you on Website">
+                  <input type="text" name="name" placeholder="Your Name" autocomplete="off" class="input-field" required>
+                  <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field" required>
               </div>
-
-              <div class="input-wrapper">
-
-                <!-- <div class="icon-wrapper">
-                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-
-                  <select name="person" class="input-field">
-                    <option value="1-person">1 Person</option>
-                    <option value="2-person">2 Person</option>
-                    <option value="3-person">3 Person</option>
-                    <option value="4-person">4 Person</option>
-                    <option value="5-person">5 Person</option>
-                    <option value="6-person">6 Person</option>
-                    <option value="7-person">7 Person</option>
-                  </select>
-
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div> -->
-
-                <!-- <div class="icon-wrapper">
-                  <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
-
-                  <input type="date" name="reservation-date" class="input-field">
-
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
-
-                <div class="icon-wrapper">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <select name="person" class="input-field">
-                    <option value="08:00am">08 : 00 am</option>
-                    <option value="09:00am">09 : 00 am</option>
-                    <option value="010:00am">10 : 00 am</option>
-                    <option value="011:00am">11 : 00 am</option>
-                    <option value="012:00am">12 : 00 am</option>
-                    <option value="01:00pm">01 : 00 pm</option>
-                    <option value="02:00pm">02 : 00 pm</option>
-                    <option value="03:00pm">03 : 00 pm</option>
-                    <option value="04:00pm">04 : 00 pm</option>
-                    <option value="05:00pm">05 : 00 pm</option>
-                    <option value="06:00pm">06 : 00 pm</option>
-                    <option value="07:00pm">07 : 00 pm</option>
-                    <option value="08:00pm">08 : 00 pm</option>
-                    <option value="09:00pm">09 : 00 pm</option>
-                    <option value="10:00pm">10 : 00 pm</option>
-                  </select>
-
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div> -->
-
-              </div>
-
-              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
-
+      
+              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field" required></textarea>
+      
               <button type="submit" class="btn btn-secondary">
-                <span class="text text-1">Send</span>
-
-                <span class="text text-2" aria-hidden="true">Send</span>
+                  <span class="text text-1">Send</span>
+                  <span class="text text-2" aria-hidden="true">Send</span>
               </button>
+          </form>
 
-            </form>
+            <div class="form-right text-center" style="background-color: #474643;">
 
-            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
-
-              <h2 class="headline-1 text-center" style="color: white;">Contact Us</h2>
+              <h2 class="headline-1 text-center" style="color: white; margin-top: 60px;">Contact Us</h2>
 
               <!-- <p class="contact-label">Booking Request</p> -->
+              <p class="contact-label">Mobile</p>
 
-              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
+              <a href="tel:+88123123456" class="body-1 contact-number hover-underline" style="color: white; font-size:large;">+91-9879555976</a>
 
               <div class="separator"></div>
 
               <p class="contact-label">Location</p>
 
-              <address class="body-4" style="color: black;">
-                16, Murzban Rd, Azad Maidan, Fort<br> Mumbai, Maharashtra 400001
+              <address class="body-4" style="color: rgb(241, 241, 241);">
+                1201 – Mars, Rajhans Campus, Opp. Rajhans Cinema, Pal Hazira Road, Surat – 395009, Gujarat, India
               </address>
-
-              <!-- <p class="contact-label">Lunch Time</p>
-
-              <p class="body-4">
-                Monday to Sunday <br>
-                11.00 am - 2.30pm
-              </p>
-
-              <p class="contact-label">Dinner Time</p>
-
-              <p class="body-4">
-                Monday to Sunday <br>
-                05.00 pm - 10.00pm
-              </p> -->
-
             </div>
 
           </div>
 
         </div>
       </section>
-
-
-
-
-
-      <!-- 
-        - #EVENT
-      -->
-<!-- 
-      <section class="section event bg-black-10" aria-label="event">
-        <div class="container">
-
-          <p class="section-subtitle label-2 text-center">Recent Updates</p>
-
-          <h2 class="section-title headline-1 text-center">Upcoming Event</h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="event-card has-before hover:shine">
-
-                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                  <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
-                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-
-                  <time class="publish-date label-2" datetime="2022-09-15">15/09/2022</time>
-                </div>
-
-                <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Food, Flavour</p>
-
-                  <h3 class="card-title title-2 text-center">
-                    Flavour so good you’ll try to eat with your eyes.
-                  </h3>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="event-card has-before hover:shine">
-
-                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                  <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
-                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-
-                  <time class="publish-date label-2" datetime="2022-09-08">08/09/2022</time>
-                </div>
-
-                <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Healthy Food</p>
-
-                  <h3 class="card-title title-2 text-center">
-                    Flavour so good you’ll try to eat with your eyes.
-                  </h3>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="event-card has-before hover:shine">
-
-                <div class="card-banner img-holder" style="--width: 350; --height: 450;">
-                  <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
-                    alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
-
-                  <time class="publish-date label-2" datetime="2022-09-03">03/09/2022</time>
-                </div>
-
-                <div class="card-content">
-                  <p class="card-subtitle label-2 text-center">Recipie</p>
-
-                  <h3 class="card-title title-2 text-center">
-                    Flavour so good you’ll try to eat with your eyes.
-                  </h3>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <a href="#" class="btn btn-primary">
-            <span class="text text-1">View Our Blog</span>
-
-            <span class="text text-2" aria-hidden="true">View Our Blog</span>
-          </a>
-
-        </div>
-      </section> -->
-
     </article>
   </main>
 
@@ -1414,9 +1004,9 @@
   <!-- 
     - #FOOTER
   -->
-<!-- 
+
   <footer class="footer section has-bg-image text-center"
-    style="background-image: url('./assets/images/footer-bg.jpg')">
+    style="background-image: url('./assets/images/IMG_9218.JPG'); ">
     <div class="container">
 
       <div class="footer-top grid-list">
@@ -1424,46 +1014,23 @@
         <div class="footer-brand has-before has-after">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="grilli home">
+            <img src="./assets/images/logo-2.png" width="160" height="50" loading="lazy" alt="grilli home">
           </a>
 
           <address class="body-4">
-            Restaurant St, Delicious City, London 9578, UK
+            1201 – Mars, Rajhans Campus, Opp. Rajhans Cinema, Pal Hazira Road, Surat – 395009, Gujarat, India
           </address>
 
-          <a href="mailto:booking@grilli.com" class="body-4 contact-link">booking@grilli.com</a>
+          <a href="mailto:fortunehs99@gmail.com" class="body-4 contact-link">fortunehs99@gmail.com</a>
 
-          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
-
-          <p class="body-4">
-            Open : 09:00 am - 01:00 pm
-          </p>
+          <a href="tel:+919879555976" class="body-4 contact-link"> +91-9879555976</a>
+          <a href="tel:+88123123456" class="body-4 contact-link"> +91-9879555976</a>
 
           <div class="wrapper">
             <div class="separator"></div>
             <div class="separator"></div>
             <div class="separator"></div>
           </div>
-
-          <p class="title-1">Get News & Offers</p>
-
-          <p class="label-1">
-            Subscribe us & Get <span class="span">25% Off.</span>
-          </p>
-
-          <form action="" class="input-wrapper">
-            <div class="icon-wrapper">
-              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-
-              <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
-            </div>
-
-            <button type="submit" class="btn btn-secondary">
-              <span class="text text-1">Subscribe</span>
-
-              <span class="text text-2" aria-hidden="true">Subscribe</span>
-            </button>
-          </form>
 
         </div>
 
@@ -1474,19 +1041,19 @@
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Menus</a>
+            <a href="#Buisness" class="label-2 footer-link hover-underline">Buisness Areas</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+            <a href="#about" class="label-2 footer-link hover-underline">About Us</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Our Chefs</a>
+            <a href="#Strength" class="label-2 footer-link hover-underline">Our Strength</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Contact</a>
+            <a href="#Contact" class="label-2 footer-link hover-underline">Contact</a>
           </li>
 
         </ul>
@@ -1506,11 +1073,7 @@
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Youtube</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Google Map</a>
+            <a href="https://maps.app.goo.gl/EhA4iin4YuTSdHsL8" class="label-2 footer-link hover-underline">Google Map</a>
           </li>
 
         </ul>
@@ -1520,8 +1083,10 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2022 Grilli. All Rights Reserved | Crafted by <a href="https://github.com/codewithsadee"
-            target="_blank" class="link">codewithsadee</a>
+          &copy; 2024 FHS. All Rights Reserved | Developed by <a href="https://github.com/JrG-One"
+            target="_blank" class="link">Ojaswa</a> | <a href="https://github.com/Rudrakshp"
+            target="_blank" class="link">Rudraksh</a> | <a href="https://github.com/Sakhee-20"
+            target="_blank" class="link">Sakhee</a>
         </p>
 
       </div>
@@ -1529,7 +1094,7 @@
     </div>
   </footer>
 
- -->
+
 
 
 
