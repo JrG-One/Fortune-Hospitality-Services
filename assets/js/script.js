@@ -189,3 +189,79 @@ function changeQuote() {
 
 // Auto change quote every 5 seconds
 setInterval(changeQuote, 5000);
+
+// Define an array of objects containing the image paths and titles
+const services = [
+  {
+    title: "Breakfast",
+    image: "./assets/images/cuisines/13.jpg",
+    alt: "Breakfast",
+  },
+  {
+    title: "Appetizers",
+    image: "./assets/images/cuisines/12.jpg",
+    alt: "Appetizers",
+  },
+  {
+    title: "Drinks",
+    image: "./assets/images/cuisines/15.jpg",
+    alt: "Drinks",
+  },
+  {
+    title: "Desserts",
+    image: "./assets/images/cuisines/16.jpg",
+    alt: "Desserts",
+  },
+  {
+    title: "Main Course",
+    image: "./assets/images/cuisines/17.jpg",
+    alt: "Main Course",
+  },
+  {
+    title: "Salads",
+    image: "./assets/images/cuisines/18.jpg",
+    alt: "Salads",
+  }
+];
+
+let currentIndices = [0, 1, 2]; // Start with the first three services
+const changeInterval = 5000; // 5 seconds
+const transitionTime = 1000; // 1 second fade transition
+
+// Function to change the service card content
+function changeService() {
+  // Get all service cards
+  const serviceCards = document.querySelectorAll(".service-card");
+
+  serviceCards.forEach((card, index) => {
+    const imgElement = card.querySelector(".card-banner img");
+    const titleElement = card.querySelector(".card-title a");
+
+    // Fade-out the content by adding the hidden class
+    card.querySelector(".card-banner").classList.add("hidden");
+    card.querySelector(".card-content").classList.add("hidden");
+
+    // Wait for the fade-out to finish (1 second), then change content
+    setTimeout(() => {
+      const serviceIndex = currentIndices[index];
+
+      // Update the image and title
+      imgElement.src = services[serviceIndex].image;
+      imgElement.alt = services[serviceIndex].alt;
+      titleElement.textContent = services[serviceIndex].title;
+
+      // After content update, fade-in by removing the hidden class
+      card.querySelector(".card-banner").classList.remove("hidden");
+      card.querySelector(".card-content").classList.remove("hidden");
+    }, transitionTime); // Wait for fade-out to finish
+  });
+
+  // Update indices for the next cycle
+  currentIndices = currentIndices.map(i => (i + 3) % services.length);
+}
+
+// Initial service change
+changeService();
+
+// Set an interval to automatically change the content every 5 seconds
+setInterval(changeService, changeInterval);
