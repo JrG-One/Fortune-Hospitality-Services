@@ -2194,19 +2194,3 @@
         transform: translateX(100%); /* End off-screen to the right */
     }
 }
-
-/* General styles */
-.service-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.card-banner, .card-content {
-  opacity: 1; /* Fully visible */
-  transition: opacity 1s ease-in-out; /* Smooth transition for fade-in and fade-out */
-}
-
-/* Hidden class for fade-out */
-.hidden {
-  opacity: 0; /* Fully transparent */
-}

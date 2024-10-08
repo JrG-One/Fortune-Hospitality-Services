@@ -2,65 +2,842 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="about_styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome for icons -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Fortune Hospitatlity Services</title>
+  <meta name="title" content="Fortune Hospitatlity Services">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/IMG_9191.JPG">
+  <link rel="preload" as="image" href="./assets/images/IMG_0968.jpg">
+  <link rel="preload" as="image" href="./assets/images/IMG_9218.JPG">
 </head>
 
-<body>
-    <section class="about-us">
-        <div class="hero-image">
-            <img src="your-image-path.jpg" alt="About Us" class="hero-img">
+<body id="top">
+
+
+  <div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">FHS</p>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #TOP BAR
+  -->
+
+  <div class="topbar" style="background-color: gray; position:fixed;">
+    <div class="container">
+
+      <address class="topbar-item" style="margin-left: -180px;">
+        <div class="icon">
+          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
         </div>
-    
-        <div class="about-text">
-            <h1>About Us</h1>
-            <p>
-                We are dedicated to providing the best services in our field. Our team of experts is committed to excellence and quality.
+
+        <span class="span">
+          1201 – Mars, Rajhans Campus, Opp. Rajhans Cinema, Pal Hazira Road, Surat – 395009, Gujarat, India
+        </span>
+      </address>
+      <div class="separator"></div>
+        
+        <a href="tel:+919974773663" class="topbar-item link">
+          <div class="icon">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+          </div>
+        <span class="span">+91-9974773663 </span>
+      </a>
+      <div class="separator"></div>
+      <a href="tel:+919879555976" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span"> +91-9879555976</span>
+      </a>
+
+      <div class="separator"></div>
+
+      <a href="mailto:fortunehs99@gmail.com" class="topbar-item link">
+        <div class="icon">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+        </div>
+
+        <span class="span">fortunehs99@gmail.com</span>
+      </a>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header style="color: gray;">
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo-2.png" width="100" height="50" alt="Grilli - Home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <button class="close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <a href="#" class="logo">
+          <img src="./assets/images/logo-2.png" width="100" height="50" alt="">
+        </a>
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span" style="color: whitesmoke;">Home</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#Buisness" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span" style="color: whitesmoke;" >Buisness Areas</span>
+            </a>
+          </li>
+
+          <li class="navbar-item ">
+            <a href="./aboutus.html" class="navbar-link hover-underline active">
+              <div class="separator"></div>
+
+              <span class="span" style="color: whitesmoke;">About Us</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#Strength" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span" style="color: whitesmoke;">Our Strength</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="./index.html#Contact" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span" style="color: whitesmoke;">Contact</span>
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="text-center">
+          <p class="headline-1 navbar-title">Visit Us</p>
+
+          <address class="body-4">
+            1201 – Mars, Rajhans Campus, Opp. Rajhans Cinema, Pal Hazira Road, Surat – 395009, Gujarat, India
+          </address>
+
+          <a href="mailto:fortunehs99@gmail.com" class="body-4 sidebar-link">fortunehs99@gmail.com</a>
+
+          <div class="separator"></div>
+
+          <p class="contact-label">Contact</p>
+
+          <a href="tel:+91-9879555976" class="body-1 contact-number hover-underline">
+            +91-9879555976
+          </a>
+        </div>
+
+      </nav>
+
+      <a href="./carrers.html" class="btn btn-secondary">
+        <span class="text text-1">Careers</span>
+
+        <span class="text text-2" aria-hidden="true">Careers</span>
+      </a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero text-center" aria-label="home" id="home" >
+
+        <ul class="hero-slider" data-hero-slider>
+
+          <li class="slider-item active" data-hero-slider-item >
+
+            <div class="slider-bg">
+              <img src="./assets/images/hero-slider-1.jpg" width="1880" height="950" alt="" class="img-cover" style="height: 75vh;">
+            </div>
+
+            <h1 class="display-1 hero-title slider">
+              About Us
+            </h1>
+
+            <p class="body-2 hero-text slider">
+              Fortune Hospitality Services
+            </p>
+          </li>
+
+      </section>
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about text-center" aria-labelledby="about-label" id="about" style="margin-top:-290px ;">
+        <div style="padding: 30px; margin-top: -90px;margin-bottom: -90px">
+      
+
+            <!-- <p class="label-2 section-subtitle" id="about-label">Our Story</p> -->
+
+            <p style="color:hsl(35, 31%, 69%); width: 100%;">
+                At the outset, we take this opportunity to introduce ourselves as one of the leading 
+service providers in the field of Catering, Housekeeping, and other Allied Services. <br>
+FHS is a Partnership Firm with Partners named Mr. Harish V. Shetty & Dayanand 
+V. Shetty, who have a rich & meaningful experience of 25 years in the field of 
+Hospitality Services. <br>
+We are at the forefront of providing complete Catering Services, Housekeeping 
+Mgt., Laundry, Plant & Event Management. Additionally, FHS has expanded its 
+line of services to include facility management. <br>
+Our professionally managed group has been providing the best quality, with high 
+standards and customer-satisfactory services. We have also been providing safety 
+and site management guidelines for all our Valued Clients. Most of our Services 
+are cost-effective, health-friendly, and designed in such a way that they would suit 
+the requirements of all our valued customers. <br>
+We have acquired the best human assets to provide all possible types of services at 
+any place at any given point of time. We have also been practicing modern 
+methodology and using scientific and modernized equipment for cooking. 
+Our main motto is to grow with an organization wherever associated and if given a 
+chance we will endeavor to put our best & sincere efforts to prove our capabilities 
+and competencies and fulfill our commitments. <br>
+For any queries, please feel free to contact us at the numbers or mail us at 
+fortunehs99@gmail.com <br>
+Thanking you and assuring of our best services always. 
+            </p>
+
+            <!-- <div class="contact-label">Book Through Call</div>
+
+            <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+80 (400) 123 4567</a> -->
+
+        </div>
+      </section>
+
+      
+
+
+      
+      <!-- 
+        - #SERVICE
+      -->
+
+      <section class="section service bg-black-10 text-center" aria-label="service">
+        <div class="container" >
+            <div style="margin-top: -70px;margin-bottom: -70px">
+            <p style="color:hsl(35, 31%, 69%); width: 100%; ">
+                Fortune is incorporated to provide its clients with a cost-effective and 
+value-added service. <br>
+Our company’s growth is testimony to the principles on which the 
+company was founded. Fundamentally we expressed the belief that by 
+creating the right spirit we would attract ambitious and dedicated people 
+who would eventually form the core of a strong company. The key to 
+our client retention rate would be our ability to source the best staff in 
+the industry. We have tried to live by the guidelines: 
+            </p>
+            <ul style="margin-left: 250px; margin-top: 25px; justify-content: center; align-items: center;">
+                <li>
+                    <div class="menu-card hover:card">
+                      <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+                      <div>
+                        <p class="card-text label-1" style="font-size: 1.6rem;">
+                            Concentrate on what we do best. 
+                        </p>
+                      </div>
+            
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-card hover:card">
+                      <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+                      <div>
+                        <p class="card-text label-1" style="font-size: 1.6rem;">
+                            Try to be one of the best. 
+                        </p>
+                      </div>
+            
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-card hover:card">
+                      <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+                      <div>
+                        <p class="card-text label-1" style="font-size: 1.6rem;">
+                            Develop a strong coordinated team.
+                        </p>
+                      </div>
+            
+                    </div>
+                  </li>
+                  <li>
+                    <div class="menu-card hover:card">
+                      <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+                      <div>
+                        <p class="card-text label-1" style="font-size: 1.6rem;">
+                            Enjoy and enhance the lives of our employees.  
+                        </p>
+                      </div>
+            
+                    </div>
+                  </li>
+            </ul>
+            <p style="color:hsl(35, 31%, 69%); width: 100%; margin-top: 22px;">
+                Reducing client costs while improving overall quality is our most 
+challenging assignment. This objective is met by our desire to Quality 
+hospitality service provider.
             </p>
         </div>
-    
-        <div class="certificates">
-            <h2>Our Certificates</h2>
-            <div class="certificates-container">
-                <div class="certificate-card">
-                    <a href="certificate1.jpg" target="_blank">
-                        <img src="certificate1.jpg" alt="Certificate 1" class="certificate-img">
-                    </a>
-                </div>
-                <div class="certificate-card">
-                    <a href="certificate2.jpg" target="_blank">
-                        <img src="certificate2.jpg" alt="Certificate 2" class="certificate-img">
-                    </a>
-                </div>
-                <div class="certificate-card">
-                    <a href="certificate3.jpg" target="_blank">
-                        <img src="certificate3.jpg" alt="Certificate 3" class="certificate-img">
-                    </a>
-                </div>
-                <div class="certificate-card">
-                    <a href="certificate4.jpg" target="_blank">
-                        <img src="certificate4.jpg" alt="Certificate 4" class="certificate-img">
-                    </a>
-                </div>
-                <div class="certificate-card">
-                    <a href="certificate5.jpg" target="_blank">
-                        <img src="certificate5.jpg" alt="Certificate 5" class="certificate-img">
-                    </a>
-                </div>
-                <div class="certificate-card">
-                    <a href="certificate6.jpg" target="_blank">
-                        <img src="certificate6.jpg" alt="Certificate 6" class="certificate-img">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+          <img src="./assets/images/shape-1.png" width="246" height="412" loading="lazy" alt="shape"
+            class="shape shape-1 move-anim">
+          <img src="./assets/images/shape-2.png" width="343" height="345" loading="lazy" alt="shape"
+            class="shape shape-2 move-anim">
 
-    <script src="about_script.js"></script>
+        </div>
+      </section>
+      <!-- 
+  - #BUSINESS AREAS
+-->
+
+<section class="section menu" aria-label="menu-label" id="Buisness">
+    <div class="container">
+    <div style="margin-top: -70px;">
+      <p class="section-subtitle text-center label-2">Fortune Hospitality Services:- The First Choice</p>
+      <ul class="grid-list">
+  
+        <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Caretaker to your investments 
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Value additions
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Responsive Management
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Integrity of Company  
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Well trained & uniformed Personnel   
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Competitive purchasing: So that we pass on the best price to our    
+clients
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Cost-effective solutions 
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Peace of mind: For you to concentrate on your core business
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Hygienic work environment: helps in motivating your staff  
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Professionalism   
+                </p>
+              </div>
+    
+            </div>
+          </li>
+
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Diverse Exposure  
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Reputed Vendors 
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Flexibility toward customized needs 
+                </p>
+              </div>
+    
+            </div>
+          </li>
+          <li>
+            <div class="menu-card hover:card">
+              <img src="./assets/images/badge-1.png" width="15" height="15" loading="lazy" alt="badge" class="abs-img" style="margin-top: 10px;">
+              <div>
+                <p class="card-text label-1" style="font-size: 1.6rem;">
+                    Innovative yet cost-conscious
+                </p>
+              </div>
+    
+            </div>
+          </li>
+  
+      </ul>
+    </div>
+      <img src="./assets/images/shape-5.png" style="height: 70%;" loading="lazy" alt="shape"
+        class="shape shape-2 move-anim">
+      <img src="./assets/images/shape-6.png" style="width: 80%;" width="343" height="345" loading="lazy" alt="shape"
+        class="shape shape-3 move-anim">
+    </div>
+  </section>
+  
+
+
+
+
+
+      <!-- 
+        - #FEATURES
+      -->
+
+      <section class="section features text-center" aria-label="features" style="margin-top: -140px;" id="Strength">
+        <div class="container">
+
+          <h2 class="headline-1 section-title">Our Clients</h2>
+
+          <ul class="grid-list">
+
+            <li class="feature-item">
+              <div class="feature-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                </div>
+              </div>
+            </li>
+
+            <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+              <li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li><li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li><li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li><li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li><li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li><li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li><li class="feature-item">
+                <div class="feature-card">
+  
+                  <div class="card-icon">
+                    <img src="./assets/images/features-icon-1.png" width="100" height="80" loading="lazy" alt="icon">
+                  </div>
+                </div>
+              </li>
+
+          </ul>
+
+          <img src="./assets/images/shape-7.png" style="z-index: 1;" width="208" height="178" loading="lazy" alt="shape"
+            class="shape shape-1">
+
+          <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
+            class="shape shape-2">
+
+        </div>
+      </section>
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer section has-bg-image text-center"
+    style="background-image: url('./assets/images/IMG_9218.JPG'); ">
+    <div class="container">
+
+      <div class="footer-top grid-list">
+
+        <div class="footer-brand has-before has-after">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-2.png" width="160" height="50" loading="lazy" alt="grilli home">
+          </a>
+
+          <address class="body-4">
+            1201 – Mars, Rajhans Campus, Opp. Rajhans Cinema, Pal Hazira Road, Surat – 395009, Gujarat, India
+          </address>
+
+          <a href="mailto:fortunehs99@gmail.com" class="body-4 contact-link">fortunehs99@gmail.com</a>
+
+          <a href="tel:+919879555976" class="body-4 contact-link"> +91-9879555976</a>
+          <a href="tel:+88123123456" class="body-4 contact-link"> +91-9879555976</a>
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Home</a>
+          </li>
+
+          <li>
+            <a href="#Buisness" class="label-2 footer-link hover-underline">Buisness Areas</a>
+          </li>
+
+          <li>
+            <a href="#about" class="label-2 footer-link hover-underline">About Us</a>
+          </li>
+
+          <li>
+            <a href="#Strength" class="label-2 footer-link hover-underline">Our Strength</a>
+          </li>
+
+          <li>
+            <a href="#Contact" class="label-2 footer-link hover-underline">Contact</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Instagram</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
+          </li>
+
+          <li>
+            <a href="https://maps.app.goo.gl/EhA4iin4YuTSdHsL8" class="label-2 footer-link hover-underline">Google Map</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2024 FHS. All Rights Reserved | Developed by <a href="https://github.com/JrG-One"
+            target="_blank" class="link">Ojaswa</a> | <a href="https://github.com/Rudrakshp"
+            target="_blank" class="link">Rudraksh</a> | <a href="https://github.com/Sakhee-20"
+            target="_blank" class="link">Sakhee</a>
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
