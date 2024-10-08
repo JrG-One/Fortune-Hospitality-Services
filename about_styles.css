@@ -1,0 +1,188 @@
+/* Basic resets and body styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--eerie-black-1); /* Dark background for contrast */
+    color: var(--white); /* Light text color for readability */
+}
+
+/* About Us Section */
+.about-us {
+    text-align: center;
+}
+
+/* Full-width Image Section */
+.hero-image {
+    width: 100%;
+    height: 75vh; /* 75% of the viewport height */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hero image styles */
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+    filter: brightness(80%); /* Dim the image slightly */
+}
+
+.about-text {
+    padding: 20px;
+    background-color: var(--davys-grey); /* Light grey background for text section */
+}
+
+.about-text h1 {
+    font-size: 2.5em; /* Main title size */
+    margin-bottom: 10px;
+    color: var(--gold-crayola); /* Gold color for the title */
+}
+
+.about-text p {
+    font-size: 1.2em; /* Description size */
+    color: var(--quick-silver); /* Lighter grey for description */
+}
+
+/* Certificates Section */
+.certificates {
+    padding: 40px 20px;
+    background-color: var(--smoky-black-2); /* Darker background for certificates section */
+}
+
+.certificates h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--gold-crayola); /* Gold color for section title */
+}
+
+/* Certificates container */
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap certificates to the next line */
+}
+
+/* Certificate card styles */
+.certificate-card {
+    position: relative; /* For positioning the hover effect */
+    margin: 10px;
+    width: 250px; /* Fixed width for the cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 8px; /* Rounded corners */
+    background-color: var(--white-alpha-10); /* Semi-transparent white for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+.certificate-card a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+/* Hover effect */
+.certificate-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+/* Certificate image styles */
+.certificate-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Image zoom effect on hover */
+.certificate-card:hover .certificate-img {
+    transform: scale(1.05); /* Slightly enlarge image */
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: var(--white); /* White background for modal */
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid var(--davys-grey); /* Border color */
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 8px; /* Rounded corners */
+}
+
+.close {
+    color: var(--black); /* Close button color */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--gold-crayola); /* Change color on hover */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Fade in animation for elements */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+/* Certificates Section */
+.certificates {
+    padding: 40px 20px;
+    background-color: var(--smoky-black-2); /* Darker background for certificates section */
+}
+
+.certificates h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--gold-crayola); /* Gold color for section title */
+}
+
+/* Certificates container */
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center items horizontally */
+}
+
+/* Certificate card styles */
+.certificate-card {
+    position: relative; /* For positioning the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 8px; /* Rounded corners */
+    background-color: var(--white-alpha-10); /* Semi-transparent white for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    width: 100%; /* Full width of the grid cell */
+}
+
+/* Certificate image styles */
+.certificate-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Image zoom effect on hover */
+.certificate-card:hover .certificate-img {
+    transform: scale(1.05); /* Slightly enlarge image */
+}
