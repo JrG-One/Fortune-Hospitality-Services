@@ -193,35 +193,52 @@ setInterval(changeQuote, 5000);
 // Define an array of objects containing the image paths and titles
 const services = [
   {
-    title: "Breakfast",
+    title: "Delight Pizza",
     image: "./assets/images/cuisines/13.jpg",
-    alt: "Breakfast",
+    alt: "Delight Pizza",
   },
   {
-    title: "Appetizers",
+    title: "Veg.Cheese Burger",
     image: "./assets/images/cuisines/12.jpg",
-    alt: "Appetizers",
+    alt: "Veg.Cheese Burger",
   },
   {
-    title: "Drinks",
+    title: "Falooda",
     image: "./assets/images/cuisines/15.jpg",
-    alt: "Drinks",
+    alt: "Falooda",
   },
   {
-    title: "Desserts",
-    image: "./assets/images/cuisines/16.jpg",
-    alt: "Desserts",
+    title: "Special Dosa",
+    image: "./assets/images/cuisines/3.jpg",
+    alt: "Special Dosa",
   },
   {
-    title: "Main Course",
+    title: "Jeeni Roll",
     image: "./assets/images/cuisines/17.jpg",
-    alt: "Main Course",
+    alt: "Jeeni Roll",
   },
   {
-    title: "Salads",
-    image: "./assets/images/cuisines/18.jpg",
-    alt: "Salads",
+    title: "Dragon Paneer",
+    image: "./assets/images/cuisines/1.jpg",
+    alt: "Dragon Paneer",
+  },
+  {
+    title: "Pav Bhaji",
+    image: "./assets/images/cuisines/11.jpg",
+    alt: "Pav Bhaji",
+  },
+  {
+    title: "Thatte Idli",
+    image: "./assets/images/cuisines/5.jpg",
+    alt: "Thatte Idli",
+  },
+  {
+    title: "Chole Bhature",
+    image: "./assets/images/cuisines/16.jpg",
+    alt: "Chole Bhature",
   }
+
+
 ];
 
 let currentIndices = [0, 1, 2]; // Start with the first three services
