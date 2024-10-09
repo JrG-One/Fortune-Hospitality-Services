@@ -1233,6 +1233,7 @@
   .features .section-title { margin-block-end: 40px; }
   
   .feature-card { padding: 30px 20px 40px; }
+  .feature-card1 { padding: 30px 20px 40px; }
   
   .feature-item:nth-child(2n+1) .feature-card { background-color: var(--eerie-black-3); }
   
@@ -1243,7 +1244,10 @@
     margin-inline: auto;
     transition: var(--transition-2);
   }
-  
+  .feature-card1 .card-icon1 {
+    max-width: max-content;
+    margin-inline: auto;
+  }
   .feature-card:hover .card-icon { transform: scale(-1) rotate(180deg); }
   
   .feature-card .card-title { margin-block: 20px; }
@@ -1654,6 +1658,11 @@
      */
   
     .grid-list { grid-template-columns: 1fr 1fr; }
+    .grid-list1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* 2 equal columns */
+      gap: 20px; /* Optional: Space between items */
+    }
   
     :is(.service, .event) .container { max-width: 820px; }
   
@@ -2193,20 +2202,4 @@
         opacity: 0;
         transform: translateX(100%); /* End off-screen to the right */
     }
-}
-
-/* General styles */
-.service-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.card-banner, .card-content {
-  opacity: 1; /* Fully visible */
-  transition: opacity 1s ease-in-out; /* Smooth transition for fade-in and fade-out */
-}
-
-/* Hidden class for fade-out */
-.hidden {
-  opacity: 0; /* Fully transparent */
 }
