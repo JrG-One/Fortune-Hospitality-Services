@@ -5,24 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers at Fortune Hospitality Services (FHS)</title>
     <link rel="stylesheet" href="car_style.css">
-    
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home" class="smooth-scroll">Home</a></li>
-            <li><a href="#about" class="smooth-scroll">About Us</a></li>
-            <li><a href="#vacancies" class="smooth-scroll">Vacancies</a></li>
-            <li><a href="#contact" class="smooth-scroll">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="header" data-header style="color: gray;">
+        <div class="container">
+            <nav class="navbar" data-navbar>
+                <a href="#" class="logo">
+                    <img src="./assets/images/logo-2.png" width="100" height="50" alt="Grilli - Home">
+                </a>
+                <button class="close-btn" aria-label="Close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="#home" class="navbar-link hover-underline active">
+                            <div class="separator"></div>
+                            <span class="span">Home</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#Buisness" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+                            <span class="span">Business Areas</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#about" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+                            <span class="span">About Us</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#Strength" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+                            <span class="span">Our Strength</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#Contact" class="navbar-link hover-underline">
+                            <div class="separator"></div>
+                            <span class="span">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="nav-open-btn" aria-label="Open menu" data-nav-toggler>
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+                <div class="overlay" data-nav-toggler data-overlay></div>
+            </nav>
+        </div>
+    </header>
 
     <!-- Main Section -->
     <section id="vacancies">
         <div class="container">
             <h1>Join the Fortune Hospitality Services Team</h1>
-            <p style="color: white;">Explore our current job openings and apply below:</p>
+            <!--<p style="color: white;">Explore our current job openings and apply below:</p> -->
 
             <!-- Job Vacancies Grid -->
             <div class="job-grid">
@@ -117,7 +157,7 @@
             document.getElementById('application-modal').style.display = 'none';
         }
     </script>
-    
+
     <script src="car_script.js"></script>
 </body>
 </html>

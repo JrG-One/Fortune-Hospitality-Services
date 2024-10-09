@@ -56,3 +56,15 @@ document.getElementById('apply-form').addEventListener('submit', function(event)
     closeForm();
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggler = document.querySelectorAll('[data-nav-toggler]');
+    const navbarList = document.querySelector('.navbar-list');
+    const overlay = document.querySelector('.overlay');
+
+    navToggler.forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            navbarList.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+    });
+});
