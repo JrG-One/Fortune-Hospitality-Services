@@ -37,7 +37,7 @@
   <link rel="preload" as="image" href="./assets/images/IMG_9218.JPG">
   <script>
     async function handleSubmit(event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault();
 
         const form = event.target;
         const formData = new FormData(form);
@@ -49,9 +49,7 @@
             });
 
             if (response.ok) {
-                // Optionally, clear the form fields after successful submission
                 form.reset();
-                // Display success message
                 alert("Form submitted successfully!");
             } else {
                 alert("There was a problem with the submission. Please try again.");
@@ -303,7 +301,7 @@
             </p>
 
           </li>
-          <li class="slider-item" data-hero-slider-item></li>
+          <li class="slider-item" data-hero-slider-item>
 
             <div class="slider-bg">
               <img src="./assets/images/IMG_9187.JPG" width="1880" height="950" alt="" class="img-cover">
@@ -332,7 +330,6 @@
         </button>
 
         <a href="#Contact" class="hero-btn has-after">
-          <!-- <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon"> -->
 
           <span class="text text-2">Contact Us</span>
         </a>
@@ -529,10 +526,8 @@
 
         </div>
       </section>
-      <!-- 
-  - #BUSINESS AREAS
--->
-
+      <!--- #BUSINESS AREAS --->
+      
 <section class="section menu" aria-label="menu-label" id="Buisness">
     <div class="container">
   
@@ -937,6 +932,18 @@
                   The art of Catering Perfected
                 </p>
             </div>
+            <div class="quote">
+              <div class="quote-mark">”</div>
+              <p class="headline-2 testi-text">
+                Catering with Passion, Serving with Pride
+              </p>
+          </div>
+          <div class="quote">
+            <div class="quote-mark">”</div>
+            <p class="headline-2 testi-text">
+              Catering that exceeds expectations, everytime
+            </p>
+        </div>
             </div>
             <div class="wrapper">
               <div class="separator"></div>
