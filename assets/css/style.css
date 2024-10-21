@@ -2203,3 +2203,68 @@
         transform: translateX(100%); /* End off-screen to the right */
     }
 }
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  background-color: var(--eerie-black-2);
+  color: var(--white);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid var(--quick-silver);
+  width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+}
+
+.close {
+  color: var(--quick-silver);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Ensuring Equal Card Sizes */
+.feature-item {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background-color: var(--eerie-black-1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  background-color: var(--eerie-black-3);
+}
+
+.card-icon img {
+  display: block;
+  margin: 0 auto 15px;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
