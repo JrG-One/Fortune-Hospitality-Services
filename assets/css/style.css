@@ -53,7 +53,7 @@
     --fontFamily-dm_sans: 'DM Sans', sans-serif;
   
     /* font-size */
-    --fontSize-display-1: calc(1.3rem + 6.7vw);
+    --fontSize-display-1: 6.8rem;
     --fontSize-headline-1: calc(2rem + 2.5vw);
     --fontSize-headline-2: calc(1.3rem + 2.4vw);
     --fontSize-title-1: calc(1.6rem + 1.2vw);
@@ -220,6 +220,7 @@
   .display-1 {
     font-size: var(--fontSize-display-1);
     line-height: var(--lineHeight-1);
+    margin-top: 190px;
   }
   
   .headline-1 { font-size: var(--fontSize-headline-1); }
@@ -864,27 +865,27 @@
     animation: rotate360 15s linear infinite;
   }
   
-  .slider-reveal {
-    transform: translateY(30px);
+/* Initial state for characters */
+.slider-reveal span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: drop 0.5s ease forwards;
+  animation-delay: calc(var(--char-index) * 0.1s); /* Stagger animation based on character index */
+}
+
+@keyframes drop {
+  0% {
     opacity: 0;
+    transform: translateY(-30px); /* Start above */
   }
-  
-  .hero .slider-item.active .slider-reveal {
-    animation: sliderReveal 1s ease forwards;
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Drop to final position */
   }
-  
-  @keyframes sliderReveal {
-    0% {
-      transform: translateY(30px);
-      opacity: 0;
-    }
-  
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  
+}
+
+
   .hero .slider-item.active .section-subtitle { animation-delay: 500ms; }
   
   .hero .slider-item.active .hero-title { animation-delay: 1000ms; }
